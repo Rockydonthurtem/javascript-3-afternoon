@@ -29,8 +29,19 @@
   Call your class Employee and receive all the data in the constructor in the order listed above.
 */
 
-//Code Here
+class Employee {
+  constructor (first_name, last_name,email,age){
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age
+  }
+  makeWidget () {
+    return `${this.first_name} ${this.last_name} Widget`
+  }
 
+}
+var j = new Employee ("Cedreic", "Harris", "eej@hdhd", 34)
 
 
 ////////// PROBLEM 2 //////////
@@ -49,7 +60,19 @@
   Call your new class Manager
 */
 
-//Code Here
+class Manager extends Employee {
+constructor (first_name, last_name,email,age,reports){
+ super (first_name, last_name,email,age)
+  this.reports = [];
+}
+hire (employee){
+this.reports.push(employee)
+}
+fire (i){
+this.reports.splice(i,1)
+}
+}
+var manager = new Manger ("Ted", "Row", "ekeke@mail", 33, 0)
 
 
 
