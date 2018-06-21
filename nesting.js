@@ -50,8 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
 
+function employeeUpdater (){
+  employees.filter(function (val,i,arr){
+    if (val.firstName==="Theo"){
+      delete val.firstName
+    }
+    else if (val.firstName==="Lorie"){
+      val.department="HR"
+    }
+  })
+  return employees
+ }
+ 
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +79,13 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(){
+  var newArr = workplaceAccidents.filter ((elem,i,arr) => {
+    return i == arr.indexOf(elem);
+
+  })
+  return newArr
+}
 
 
 
